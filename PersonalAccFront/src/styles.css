@@ -1,0 +1,134 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #463940;
+  color: blanchedalmond;
+}
+
+
+.ticket_search_pages_container{
+  display: flex;
+  justify-content: start;
+  margin-left: 40px;
+  color: blanchedalmond;
+}
+
+.app-search-by_doc-number{
+  width: 250px;
+  display: flexbox;
+  flex-direction: column;
+}
+.app-search-by_ticket-number{
+  margin-left: 50px;
+  width: 250px;
+  display: flexbox;
+  flex-direction: column;
+}
+
+.by_doc_number_input {
+  font-weight: normal;
+  font-size: 20px;
+  padding-left: 10px;
+  height: 30px;
+  border-radius: 0.45rem;
+  border: 2px solid rgb(190, 190, 190);
+  margin-bottom: 20px; 
+  box-sizing: border-box;
+  width: 200px;
+  
+}
+
+.by_ticket_number_input{
+  font-weight: normal;
+  font-size: 20px;
+  padding-left: 10px;
+  height: 30px;
+  border-radius: 0.45rem;
+  border: 2px solid rgb(190, 190, 190);
+  margin-bottom: 10px; 
+  box-sizing: border-box;
+  width: 200px;
+}
+
+.app-ticket-search-page h1{
+  margin: 10px;
+}
+
+button{
+  width: 70px;
+  height: 35px;
+  color: blanchedalmond;
+  background-color: #BC4123;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}
+
+.by_ticket_number_checkbox{
+  margin-bottom: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.print_by_ticket_number_button{
+  width: 85px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.airlines_select_number{
+  height: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.airlines_select_doc{
+  height: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.print_by_doc_number_button{
+  width: 85px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.by_doc_number_button{
+  margin-top: 23px;
+}
+
+
+
+
+
+/* Table */
+
+.ticket_table{
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: 1px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+}
+.ticket_table td{
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px;
+}
+.ticket_table thead th{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 16px;
+  border: 1px solid rgb(2, 2, 2);
+}
+
+
+

@@ -1,0 +1,51 @@
+version: '3.4'
+
+networks:
+  dockerapi-dev:
+    driver: bridge
+
+services:
+  dockerapi:
+    image: backend-image:latest
+    depends_on:
+      - "postgres_image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:80"
+    environment:
+      ConnectionStrings:TicketContext: "Host=postgres_image;Port=5432;Database=ticketsDb;Username=operator;Password=password"
+    networks: 
+      - dockerapi-dev
+
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432"
+    restart: always
+    volumes:
+      - ./dbscripts/data_all.sql:/docker-entrypoint-initdb.d/data_all.sql
+    environment:
+      POSTGRES_USER: "operator"
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_DB: "ticketsDb"
+    networks:
+    - dockerapi-dev
+  
+  frontend-image:
+    image: frontend-image:latest
+    depends_on:
+      - "backend-image"
+    build:
+      context: PersonalAccFront
+      dockerfile: Dockerfile
+    ports:
+      - "8082:80"
+    networks:
+      - dockerapi-dev
+    
+volumes:
+  dbscripts:
+
+  
